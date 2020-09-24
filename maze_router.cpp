@@ -254,7 +254,7 @@ int main(){
     unsigned int net_tot, net_num, ls, xs, ys, lt, xt, yt;
     cout << "Open Grid File\n";
     ifstream gridfile;
-    gridfile.open("ProgrammingAssignment4Files/bench4.grid");
+    gridfile.open("gridfile.grid");
     //read x, y, bend cost, via cost
     gridfile >> X;
     gridfile >> Y;
@@ -305,10 +305,10 @@ int main(){
 
     cout << "Open Netlist File\n";
     ifstream nlfile;
-    nlfile.open("ProgrammingAssignment4Files/bench4.nl");
+    nlfile.open("netlistfile.nl");
     nlfile >> net_tot;  //read total number of netlists
     ofstream outfile;
-    outfile.open("bench4", ios::out);
+    outfile.open("output", ios::out);
     outfile << net_tot << endl;
 
     cout << "Read Netlist File\n";
